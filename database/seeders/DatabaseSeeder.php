@@ -16,8 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(8)->create();
-
         // insert default user 
         DB::table('users')->insert([
             [
