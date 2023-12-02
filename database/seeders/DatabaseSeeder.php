@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
         // seed some posts 
         foreach (range(1, 8) as $i) {
             $post = Post::factory()->create([
-                'user_id' => 14,
+                'user_id' => 1,
                 'image' => 'img0' . $i . '.jpg',
                 'featured' => $i<4 ? true : false ,
             ]);
