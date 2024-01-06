@@ -100,8 +100,7 @@
             <div class="row">
                 <div class="column">
                     <div class="ss-copyright">
-                        <span>© Copyright Calvin 2020</span>
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span>© Copyright KirayePey 2024</span>
                     </div> <!-- end ss-copyright -->
                 </div>
             </div>
