@@ -3427,8 +3427,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .s-header {
     --header-height: 8.8rem;
-    --logo-width: 96px;
-    --logo-height: 24px;
+    --logo-width: 160px;
+    --logo-height: 165px;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;

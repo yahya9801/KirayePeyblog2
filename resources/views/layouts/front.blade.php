@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Calvin</title>
+    <title>KirayePey Blog</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -46,11 +46,11 @@
 
     <!-- header
     ================================================== -->
-    <header class="s-header">
+    <header class="s-header s-header--opaque">
 
         <div class="s-header__logo">
             <a class="logo" href="{{ route('home') }}">
-                <img src="{{ asset('images/logo.svg') }}" alt="Homepage">
+                <img src="{{ asset('images/KirayePey-Blog-Transparent.png') }}" alt="Homepage">
             </a>
         </div>
 
@@ -70,11 +70,11 @@
                             @endforeach
                         </ul>
                     </li>
-                    @guest
+                    {{-- @guest
                         <li>
                             <a href="{{ route('login') }}" title="">Sign In</a>
                         </li>
-                    @endguest
+                    @endguest --}}
                     @auth
                         <li>
                             <a href="{{ route('dashboard') }}" title="">Dashboard</a>
