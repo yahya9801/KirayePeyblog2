@@ -22,7 +22,7 @@
                         <div class="s-content__entry-content">
 
                             <p class="lead">
-                                {{ $post->body }}
+                                {!! nl2br(e($post->body)) !!}
                             </p>
 
 
