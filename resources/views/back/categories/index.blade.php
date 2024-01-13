@@ -64,11 +64,11 @@
                                         </i>
                                         Edit
                                     </a>
-                                    <form class="deletion-form" action="{{ route('categories.destroy', $category->id) }}"
+                                    <form class="deletion-form{{$category->id}}" action="{{ route('categories.destroy', $category->id) }}"
                                         method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm show-alert">
+                                        <button type="submit" data-id="{{$category->id}}" class="btn btn-danger btn-sm show-alert">
                                             <i class="fas fa-trash">
                                             </i>
                                             Delete
@@ -92,6 +92,7 @@
         // show alert before deleting post
         $('.show-alert').on('click', function(e) {
             e.preventDefault();
+            var categoryId = $(this).data('id');
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -102,7 +103,7 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    $('.deletion-form').submit();
+                    $('.deletion-form'+categoryId ).submit();
                 }
             })
         })
