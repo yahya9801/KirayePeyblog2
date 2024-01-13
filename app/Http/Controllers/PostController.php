@@ -45,11 +45,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {       
-        // dd($request);
         if($request->has('image')){
             $this->uploadImage($request);
         }
         $request->user()->posts()->create($request->post());
+
+        $post = Post::where('title', $request->post()['title'])->first();
+        $post->category_id = $request->post()['category'];
+        $post->update();
 
         return redirect()->route('posts.index')->with('message', 'Post created successfully');
     }
@@ -99,6 +102,7 @@ class PostController extends Controller
         $post->title    = $request->title;
         $post->excerpt  = $request->excerpt;
         $post->body     = $request->body;
+        $post->category_id     = $request->category;
         $post->save();
 
         return back()->with('message', 'Post updated successfully');

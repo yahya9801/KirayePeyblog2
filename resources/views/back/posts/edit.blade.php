@@ -77,7 +77,7 @@
                                     <option disabled>Select one</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}"
-                                            {{ $post->categories->first() && $category->id == $post->categories->first()->id ? 'selected' : '' }}>
+                                            {{ $post->category_id && $category->id == $post->category_id ? 'selected' : '' }}>
                                             {{ $category->title }}
                                         </option>
                                     @endforeach

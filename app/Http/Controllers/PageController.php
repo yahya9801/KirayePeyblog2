@@ -4,11 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\CategoryPost;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index(){
+        $categories_present = Post::selectRaw('category_id, COUNT(*) as post_count')
+            ->whereNotNull('category_id')
+            ->groupBy('category_id')
+            ->get();
+
+        // foreach category get the latest 3 posts
+        foreach ($categories_present as $key => $value) {
+            $value->posts = Post::where('category_id',$value->category_id)->latest()->take(3)->get();
+            $value->image = $value->posts[0]->image;
+            $value->title = Category::find($value->category_id)->title;
+        }
         $posts = Post::where('featured', false)
                     ->with('user', 'categories')
                     ->get();
@@ -18,7 +30,8 @@ class PageController extends Controller
         return view('front.index', [
             'posts' => $posts,
             'featured' => $featured,
-            'categories' => $categories
+            'categories' => $categories,
+            'categories_present' => $categories_present
         ]);
     }
 
@@ -33,7 +46,7 @@ class PageController extends Controller
     }
 
     public function showCategory(Category $category){
-        $posts = $category->posts()->get();
+        $posts = Post::where('category_id', $category->id)->orderBy('created_at','DESC')->get();
         $categories = Category::all();
         return view('front.categories.show', compact('category', 'posts', 'categories'));
     }

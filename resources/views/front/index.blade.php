@@ -16,38 +16,39 @@
                             <span></span>
                             <span></span>
                         </div>
-                        @foreach ($posts as $post)
+                        @foreach ($categories_present as $category)
                             <article class="brick entry" data-aos="fade-up">
-
+                                <div style="display: flex;justify-content: space-between;">
+                                    <h3 style="margin-top: 0px">
+                                        {{ $category->title }}
+                                    </h3>
+                                    <a href="{{ route('categories.view', $category->category_id) }}" class="entry__more-link" >View
+                                        More
+                                    </a>
+                                </div>
                                 <div class="entry__thumb">
-                                    <a href="{{ route('posts.view', $post->id) }}" class="thumb-link">
-                                        <img src="{{ asset('images/' . $post->image) }}" alt="">
+                                    <a  class="thumb-link">
+                                        <img src="{{ asset('images/' . $category->image) }}" alt="">
                                     </a>
                                 </div> <!-- end entry__thumb -->
 
                                 <div class="entry__text">
+                                    @foreach($category->posts as $post )
                                     <div class="entry__header">
                                         <h1 class="entry__title"><a
                                                 href="{{ route('posts.view', $post->id) }}">{{ $post->title }}</a></h1>
 
                                         <div class="entry__meta">
-                                            <span class="byline">By:
-                                                <span class='author'>
-                                                    <a href="#">{{ $post->user->name }}</a>
-                                                </span>
-                                            </span>
-                                            <span class="cat-links">
-                                                <a href="#">{{ optional($post->categories->first())->title }}</a>
-                                            </span>
+                                            <p>
+                                                {{ $post->excerpt }}
+                                            </p>
+                                            
                                         </div>
                                     </div>
-                                    <div class="entry__excerpt">
-                                        <p>
-                                            {{ $post->excerpt }}
-                                        </p>
-                                    </div>
-                                    <a class="entry__more-link" href="{{ route('posts.view', $post->id) }}">Learn
-                                        More</a>
+                                   
+                                   
+                                    @endforeach
+                                   
                                 </div> <!-- end entry__text -->
 
                             </article> <!-- end article -->

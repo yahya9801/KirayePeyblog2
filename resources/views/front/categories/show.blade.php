@@ -23,7 +23,7 @@
                         <span></span>
                         <span></span>
                     </div> --}}
-                    @foreach ($category->posts as $post)
+                    @foreach ($posts as $post)
 
                     @endforeach
                     <article class="brick entry" data-aos="fade-up">
