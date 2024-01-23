@@ -3263,7 +3263,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .bricks-wrapper .entry__title {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: 400;
     line-height: calc(var(--vspace-1) + var(--vspace-0_125));
     margin-top: 0;

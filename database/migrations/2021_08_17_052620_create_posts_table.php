@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
             $table->string('title');
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->text('excerpt');
             $table->text('body');
             $table->boolean('featured')->default(false);

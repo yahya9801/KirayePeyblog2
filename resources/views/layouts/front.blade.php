@@ -32,6 +32,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="{{ asset('front/site.webmanifest') }}">
 
+    <style>
+        /* Style the Instagram icon with a color of your choice */
+        .instagram-icon {
+            color: #405DE6; /* Change this to your preferred color */
+        }
+
+        .linkedin-icon {
+            color: #0077B5; /* LinkedIn's official blue color */
+        } 
+    </style>
+
 </head>
 
 <body id="top">
@@ -103,6 +114,14 @@
                 <div class="column">
                     <div class="ss-copyright">
                         <span>© Copyright KirayePey 2024</span>
+                    </div> <!-- end ss-copyright -->
+                </div>
+                <div class="column" style="display: flex;justify-content: flex-end;">
+                    <div class="ss-copyright">
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61555492371777&mibextid=2JQ9ocs" ><i style="color:#316FF6" class="fab fa-facebook-square fa-2x"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/kirayepeyblog/" ><i class="fab fa-instagram fa-2x"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/kirayepey-blog/" ><i class="fab fa-linkedin linkedin-icon fa-2x"></i></a>
+                        
                     </div> <!-- end ss-copyright -->
                 </div>
             </div>

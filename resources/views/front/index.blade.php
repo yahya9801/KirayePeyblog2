@@ -35,8 +35,8 @@
                                 <div class="entry__text">
                                     @foreach($category->posts as $post )
                                     <div class="entry__header">
-                                        <h1 class="entry__title"><a
-                                                href="{{ route('posts.view', $post->id) }}">{{ $post->title }}</a></h1>
+                                        <h4 class="entry__title"><a
+                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h4>
 
                                         <div class="entry__meta">
                                             <p>

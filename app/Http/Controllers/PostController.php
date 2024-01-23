@@ -22,7 +22,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = auth()->user()->posts;
+        $posts = Post::orderBy('created_at', 'desc')->get();
         return view('back.posts.index', compact('posts'));
     }
 

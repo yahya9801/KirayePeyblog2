@@ -39,8 +39,8 @@ class PageController extends Controller
         return view('posts.index');
     }
     
-    public function showPost(Post $post){
-        $post = $post->load('user','categories');
+    public function showPost($slug){
+        $post = Post::where('slug',$slug)->latest()->first();
         $categories = Category::all();
         return view('front.posts.show', compact('post', 'categories'));
     }
