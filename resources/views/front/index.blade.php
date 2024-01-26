@@ -19,9 +19,9 @@
                         @foreach ($categories_present as $category)
                             <article class="brick entry" data-aos="fade-up">
                                 <div style="display: flex;justify-content: space-between;">
-                                    <h3 style="margin-top: 0px">
+                                    <h5 style="margin-top: 0px">
                                         {{ $category->title }}
-                                    </h3>
+                                    </h5>
                                     <a href="{{ route('categories.view', $category->category_id) }}" class="entry__more-link" >View
                                         More
                                     </a>
@@ -35,15 +35,8 @@
                                 <div class="entry__text">
                                     @foreach($category->posts as $post )
                                     <div class="entry__header">
-                                        <h4 class="entry__title"><a
-                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h4>
-
-                                        <div class="entry__meta">
-                                            <p>
-                                                {{ $post->excerpt }}
-                                            </p>
-                                            
-                                        </div>
+                                        <h6 class="entry__title"><a
+                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h6>
                                     </div>
                                    
                                    

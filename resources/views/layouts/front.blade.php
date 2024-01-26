@@ -108,20 +108,39 @@
 
     <!-- footer
     ================================================== -->
-    <footer class="s-footer">
+    <footer class="s-footer" style="
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+">
         <div class="s-footer__bottom">
             <div class="row">
-                <div class="column">
+                <div class="column" style="display: flex;align-items: center;">
                     <div class="ss-copyright">
                         <span>© Copyright KirayePey 2024</span>
                     </div> <!-- end ss-copyright -->
                 </div>
                 <div class="column" style="display: flex;justify-content: flex-end;">
                     <div class="ss-copyright">
-                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61555492371777&mibextid=2JQ9ocs" ><i style="color:#316FF6" class="fab fa-facebook-square fa-2x"></i></a>
-                        <a target="_blank" href="https://www.instagram.com/kirayepeyblog/" ><i class="fab fa-instagram fa-2x"></i></a>
-                        <a target="_blank" href="https://www.linkedin.com/company/kirayepey-blog/" ><i class="fab fa-linkedin linkedin-icon fa-2x"></i></a>
-                        
+                        <div>
+                            <div style="display: flex;justify-content: center;">
+                                <h6 style="margin-bottom: 0px !important;margin-top: 0px !important;">KirayePey</h6>
+                            </div>
+                            <div style="display: flex;justify-content: space-evenly;">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=61555492371777&mibextid=2JQ9ocs" ><i style="color:#316FF6" class="fab fa-facebook-square fa-2x"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/kirayepeyblog/" ><i class="fab fa-instagram fa-2x"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/company/kirayepey-blog/" ><i class="fab fa-linkedin linkedin-icon fa-2x"></i></a>
+                            </div>  
+                        </div>
+                        <div>
+                            <div style="display: flex;justify-content: center;">
+                                <h6 style="margin-bottom: 0px !important;margin-top: 0px !important;">KirayePey Blog</h6>
+                            </div>
+                            <div style="display: flex;justify-content: space-evenly;">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=61552868493407&mibextid=2JQ9oc" ><i style="color:#316FF6" class="fab fa-facebook-square fa-2x"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/kirayepey/" ><i class="fab fa-instagram fa-2x"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/company/kirayepeyofficial/" ><i class="fab fa-linkedin linkedin-icon fa-2x"></i></a>
+                            </div>  
+                        </div>
                     </div> <!-- end ss-copyright -->
                 </div>
             </div>

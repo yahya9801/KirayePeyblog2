@@ -3129,7 +3129,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .s-bricks .masonry {
     max-width: 1520px;
     width: 94%;
-    margin: 0 auto var(--vspace-2);
+    margin: 0 auto 20px;
     overflow: hidden;
 }
 
