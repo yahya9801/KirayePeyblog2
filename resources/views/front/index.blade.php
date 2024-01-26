@@ -35,8 +35,15 @@
                                 <div class="entry__text">
                                     @foreach($category->posts as $post )
                                     <div class="entry__header">
-                                        <h6 class="entry__title"><a
-                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h6>
+                                        <h5 class="entry__title"><a
+                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h5>
+
+                                        <div class="entry__meta">
+                                            <p>
+                                                {{ $post->excerpt }}
+                                            </p>
+                                            
+                                        </div>
                                     </div>
                                    
                                    
