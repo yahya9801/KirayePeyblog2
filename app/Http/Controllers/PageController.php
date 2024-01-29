@@ -50,4 +50,16 @@ class PageController extends Controller
         $categories = Category::all();
         return view('front.categories.show', compact('category', 'posts', 'categories'));
     }
+
+    public function searchPost(Request $request){
+        $queryParam = $request->query('q');
+        $posts = Post::where('title', 'Like', "%$queryParam%")
+            ->orWhere('slug', 'Like', "%$queryParam%")
+            ->orWhere('excerpt', 'Like', "%$queryParam%")
+            ->orWhere('body', 'Like', "%$queryParam%")
+            ->orderBy('created_at', 'desc') // Replace 'desc' with 'asc' if you want ascending order
+            ->get();
+
+        return $posts;
+    }
 }

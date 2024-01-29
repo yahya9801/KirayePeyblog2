@@ -5,3 +5,58 @@
     padding-top: 40px;
     padding-bottom: 40px;
 }
+  
+.hover-underline a {
+    position: relative;
+    display: inline-block; /* Change from inline-block to inline */
+    margin: 0;
+    line-height: 1.5; /* Adjust the line height as needed */
+    padding-bottom: 3px;
+    text-decoration: none; /* Remove default underline */
+}
+
+.hover-underline a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black; /* Change this to the desired underline color */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    box-sizing: border-box; 
+}
+
+
+.hover-underline a:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.search-container {
+display: inline-block;
+max-width: 400px;
+}
+  
+#resultsContainer {
+margin-top: 10px;
+}
+
+.post-result {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-result img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+}

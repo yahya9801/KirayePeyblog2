@@ -109,7 +109,7 @@
     <footer class="s-footer">
         <div class="s-footer__bottom">
             <div class="row">
-                <div class="column">
+                <div class="column" style="display: flex;align-items: center;">
                     <div class="ss-copyright">
                         <span>© Copyright KirayePey 2024</span>
                     </div> <!-- end ss-copyright -->

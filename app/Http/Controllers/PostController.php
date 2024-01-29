@@ -128,4 +128,6 @@ class PostController extends Controller
         $request->merge(['image' => $imageName]);
         // dd($request);
     }
+
+    
 }

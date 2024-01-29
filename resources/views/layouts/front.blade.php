@@ -108,10 +108,7 @@
 
     <!-- footer
     ================================================== -->
-    <footer class="s-footer" style="
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-">
+    <footer class="s-footer">
         <div class="s-footer__bottom">
             <div class="row">
                 <div class="column" style="display: flex;align-items: center;">
