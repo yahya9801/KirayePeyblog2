@@ -8,7 +8,7 @@
                 <div style="display: flex;justify-content: center;"> 
                     <div class="search-container">
                         <!-- Add a search icon using Font Awesome -->
-                        <input type="text" id="searchInput" placeholder="Search for posts" style="padding-bottom: 0px;">
+                        <input type="text" id="searchInput" placeholder="Search for articles" style="padding-bottom: 0px;">
                         <i class="fas fa-search"></i>
 
                         <div id="resultsContainer"></div>
