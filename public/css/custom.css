@@ -86,3 +86,7 @@ margin-top: 10px;
   color: #3498db; /* Change the color of the search icon on hover and focus */
   cursor: pointer;
 }
+
+.post-result img {
+    padding: 5px; /* Adjust the padding value as needed */
+}
