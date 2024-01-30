@@ -69,8 +69,16 @@
     document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("searchInput");
         const resultsContainer = document.getElementById("resultsContainer");
+        const searchIcon = document.getElementById("searchIcon");
 
         searchInput.addEventListener("input", debounce(searchPosts, 300));
+        
+
+        document.addEventListener("click", function(event) {
+            if (!resultsContainer.contains(event.target) && event.target !== searchInput) {
+                resultsContainer.style.display = "none";
+            }
+        });
 
         async function searchPosts() {
             const query = searchInput.value;
@@ -85,12 +93,18 @@
 
             const data = await response.json();
                 console.log(data)
+            if (data.length > 0) {
+                resultsContainer.style.display = "block"; // Show the dropdown only if there are results
+            } else {
+                resultsContainer.style.display = "none"; // Hide the dropdown if there are no results
+            }
             data.forEach(post => {
-                const postResult = document.createElement("div");
+                const postResult = document.createElement("a");
                 postResult.classList.add("post-result");
+                postResult.href = "{{ route('posts.view', '') }}/" + post.slug; // Add the slug to the href attribute
 
                 const postImage = document.createElement("img");
-                postImage.src = "{{ asset('images/')}}" +'/'+post.image;
+                postImage.src = "{{ asset('images/')}}" + '/' + post.image;
                 postImage.alt = "Post Image";
 
                 const postTitle = document.createElement("p");

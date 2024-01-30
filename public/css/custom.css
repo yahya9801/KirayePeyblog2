@@ -60,3 +60,29 @@ margin-top: 10px;
     align-items: center;
     max-width: 400px;
 }
+
+
+#resultsContainer {
+    position: absolute;
+    top: 22%; /* Adjust the distance from the input, e.g., 100% is directly below the input */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-height: 200px; /* Set a max height, adjust as needed */
+    overflow-y: auto;
+    background-color: #fff; /* Set a background color or other styles */
+    z-index: 2; /* Set a higher z-index to make it appear on top of other elements */
+  }
+
+.post-result:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+}
+
+#resultsContainer p {
+    padding: 10px; /* Add padding to the paragraphs within the resultsContainer */
+}
+
+.fa-search:hover {
+  color: #3498db; /* Change the color of the search icon on hover and focus */
+  cursor: pointer;
+}
