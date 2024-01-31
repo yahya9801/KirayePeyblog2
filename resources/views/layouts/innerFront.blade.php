@@ -35,6 +35,15 @@
         ================================================== -->
     <script src="{{ asset('front/js/modernizr.js') }}"></script>
     <script defer src="{{ asset('front/js/fontawesome/all.min.js') }}"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GND0MQHMRE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GND0MQHMRE');
+    </script>
 
     <!-- favicons
         ================================================== -->
