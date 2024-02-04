@@ -50,7 +50,11 @@ class PostController extends Controller
         }
         $request->user()->posts()->create($request->post());
 
-        $post = Post::where('title', $request->post()['title'])->first();
+        $postCount = Post::where('title', $request->post()['title'])->count();
+        $post = Post::where('title', $request->post()['title'])->orderBy('created_at','DESC')->first();
+        if($postCount - 1 > 0){
+            $post->slug = $post->slug.'-'.($postCount - 1);
+        }
         $post->category_id = $request->post()['category'];
         $post->update();
 
