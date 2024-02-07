@@ -124,6 +124,9 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+
+        $sitemapController = App::make(SitemapController::class);
+        $result = $sitemapController->index();
         return back();
     }
 
