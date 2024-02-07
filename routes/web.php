@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,5 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     Route::resource('posts','PostController');
     Route::resource('categories','CategoryController')->except('show');
 });
+
+Route::get('sitemap', [SitemapController::class, 'index']);
