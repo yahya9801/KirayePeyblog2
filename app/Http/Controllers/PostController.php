@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\{Post, Category};
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 
 class PostController extends Controller
 {
@@ -57,6 +57,9 @@ class PostController extends Controller
         }
         $post->category_id = $request->post()['category'];
         $post->update();
+
+        $sitemapController = App::make(SitemapController::class);
+        $result = $sitemapController->index();
 
         return redirect()->route('posts.index')->with('message', 'Post created successfully');
     }
