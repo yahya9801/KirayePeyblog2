@@ -44,6 +44,8 @@
 
     gtag('config', 'G-GND0MQHMRE');
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640554814367131"
+    crossorigin="anonymous"></script>
 
     <!-- favicons
         ================================================== -->
