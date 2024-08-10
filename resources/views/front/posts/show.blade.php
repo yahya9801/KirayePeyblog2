@@ -8,6 +8,9 @@
                 <article class="s-content__entry format-standard">
 
                     <div class="s-content__media">
+                        <div class="byline">
+                            <a href="https://kirayepey.com/" target="_blank" class="button-kirayepey">Go to KirayePey.com</a>
+                        </div>
                         <div class="s-content__post-thumb text-center">
                             <img src="{{ asset('images/' . $post->image) }}" alt="">
                         </div>
@@ -34,6 +37,9 @@
                                 <div class="byline">
                                     <span class="bytext">Posted By</span>
                                     <a href="#0">{{ $post->user->name }}</a>
+                                </div>
+                                <div class="byline">
+                                    <a href="/"  class="button-kirayepey">Go to Homepage</a>
                                 </div>
                             </div>
                             <div class="meta-bottom">

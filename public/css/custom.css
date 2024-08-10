@@ -96,3 +96,26 @@ margin-top: 10px;
     height: auto; /* Maintain aspect ratio */
     padding: 5px; /* Adjust the padding value as needed */
 }
+
+.button-kirayepey {
+    display: inline-block;
+    padding: 10px 20px; /* Padding inside the button */
+    margin-top: 20px; /* Margin above the button */
+    margin-bottom: 10px; /* Margin below the button */
+    font-size: 16px;
+    color: white !important;
+    background-color: #C8A2C7;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-kirayepey:hover {
+    background-color: #C8A2C7;
+}
+
+@media (max-width: 767px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}

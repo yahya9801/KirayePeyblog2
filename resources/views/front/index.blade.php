@@ -5,14 +5,20 @@
         <section class="s-content s-content--no-top-padding">
             
             <div class="s-bricks">
-                <div style="display: flex;justify-content: center;"> 
-                    <div class="search-container">
-                        <!-- Add a search icon using Font Awesome -->
-                        <input type="text" id="searchInput" placeholder="Search for articles" style="padding-bottom: 0px;">
-                        <i class="fas fa-search"></i>
-
-                        <div id="resultsContainer"></div>
+                <div class="col-lg-12" style="display: flex; justify-content: center;">
+                    <!-- Button on the left -->
+                    <div class="hide-on-mobile" style="flex: 1; display: flex; justify-content: flex-start; align-items: center; margin-right: 20px;margin-left: 50px;">
+                        <a href="https://kirayepey.com/" class="button-kirayepey" target="_blank">Go to KirayePey.com</a>
                     </div>
+                    <!-- Search bar centered -->
+                    <div style="flex: 2; display: flex; justify-content: center; align-items: center; margin-left: 20px; margin-right: 20px;">
+                        <div class="search-container" style="display: flex; align-items: center;">
+                            <input type="text" id="searchInput" placeholder="Search for articles" style="padding-bottom: 0px;">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <!-- Empty space on the right to balance the layout -->
+                    <div style="flex: 1;"></div>
                 </div>
                 <div class="masonry">
                     <div class="bricks-wrapper h-group">
