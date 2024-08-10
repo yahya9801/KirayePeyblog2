@@ -9,7 +9,7 @@
 
                     <div class="s-content__media">
                         <div class="byline" style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 0 auto;">
-                            <a href="https://kirayepey.com/" target="_blank" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-align: center; text-decoration: none; border-radius: 5px;">
+                            <a href="https://kirayepey.com/" target="_blank" class="button-kirayepey">
                                 Go to KirayePey.com
                             </a>
                         </div>
