@@ -16,6 +16,7 @@
                             <input type="text" id="searchInput" placeholder="Search for articles" style="padding-bottom: 0px;">
                             <i class="fas fa-search"></i>
                         </div>
+                        <div id="resultsContainer"></div>
                     </div>
                     <!-- Empty space on the right to balance the layout -->
                     <div style="flex: 1;"></div>
