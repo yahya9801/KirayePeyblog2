@@ -119,3 +119,28 @@ margin-top: 10px;
         display: none !important;
     }
 }
+
+/* For larger screens */
+@media (min-width: 992px) {
+    .col-lg-12 {
+        flex-direction: row;
+    }
+
+    .button-container {
+        justify-content: flex-start;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 991px) {
+    .col-lg-12 {
+        flex-direction: column;
+    }
+
+    .button-container {
+        margin-bottom: 10px;
+    }
+}
